@@ -1,6 +1,148 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh" /><updated>2020-11-02T01:01:55+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">贰贰贰肆柒柒</title><subtitle>BB&amp;RR
-</subtitle><author><name>BB</name><email>18281045278@163.com</email></author><entry><title type="html">Markdown 语法笔记</title><link href="http://localhost:4000/2020/11/02/Markdown-%E8%AF%AD%E6%B3%95.html" rel="alternate" type="text/html" title="Markdown 语法笔记" /><published>2020-11-02T00:00:00+08:00</published><updated>2020-11-02T00:00:00+08:00</updated><id>http://localhost:4000/2020/11/02/Markdown%20%E8%AF%AD%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2020/11/02/Markdown-%E8%AF%AD%E6%B3%95.html">&lt;h1 id=&quot;markdown-使用方法&quot;&gt;Markdown 使用方法&lt;/h1&gt;
-&lt;h2 id=&quot;markdown-标题&quot;&gt;Markdown 标题&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh" /><updated>2020-11-03T23:56:08+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">贰贰贰肆柒柒</title><subtitle>BB&amp;RR
+</subtitle><author><name>BB</name><email>18281045278@163.com</email></author><entry><title type="html">定位</title><link href="http://localhost:4000/2020/11/03/%E5%AE%9A%E4%BD%8D.html" rel="alternate" type="text/html" title="定位" /><published>2020-11-03T00:00:00+08:00</published><updated>2020-11-03T00:00:00+08:00</updated><id>http://localhost:4000/2020/11/03/%E5%AE%9A%E4%BD%8D</id><content type="html" xml:base="http://localhost:4000/2020/11/03/%E5%AE%9A%E4%BD%8D.html">&lt;h1 id=&quot;静态定位&quot;&gt;静态定位&lt;/h1&gt;
+
+&lt;p&gt;静态定位是每个元素获取的默认值&lt;/p&gt;
+
+&lt;p&gt;为了演示这一点，首先在HTML中添加一个&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;positioned&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;...&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;现在，将一下规则添加到CSS的底部：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.positiioned&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;yellow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果现在保存和刷新，除了第2段的更新的背景颜色，根本没有差别——静态定位是默认行为!&lt;/p&gt;
+
+&lt;h1 id=&quot;相对定位&quot;&gt;相对定位&lt;/h1&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果在此阶段保存并刷新，则结果根本不会发生变化。修改元素的位置需要使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bottom&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right&lt;/code&gt; 属性 。&lt;/p&gt;
+
+&lt;h1 id=&quot;topbottomleftright&quot;&gt;top，bottom，left，right&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bottom&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right&lt;/code&gt;来精确指定要将定位元素移动到的位置。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;这些属性的值可以采用逻辑上期望的任何单位——px，mm，rems，%等。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;绝对定位&quot;&gt;绝对定位&lt;/h1&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;position: absolute;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;绝对定位的的元素独立于一切，处于单独的一层。&lt;/p&gt;
+
+&lt;p&gt;这意味着可以创建不干扰页面上其他元素的位置的隔离的UI功能。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;margins 仍会影响定位的元素。然而 margin collapsing 不会。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;定位上下文&quot;&gt;定位上下文&lt;/h1&gt;
+
+&lt;p&gt;绝对元素的”包含元素“，取决于绝对定位元素的父元素position属性。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;如果所有的父元素都没有显式地定义position属性，那么所有的父元素默认情况下position属性都是static。结果，绝对定位元素会被包含在初始块容器中。这个初始块容器有着和浏览器视口一样的尺寸，并且&amp;lt;html&amp;gt;元素也被包含在这个容器里面。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;简单来说，绝对定位元素会被放在&amp;lt;html&amp;gt;元素的外面，并且根据浏览器视口来定位。&lt;/p&gt;
+
+&lt;h1 id=&quot;z-index&quot;&gt;z-index&lt;/h1&gt;
+
+&lt;p&gt;z-index决定每一层的顺序。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;源顺序（HTML标记）中后定位的元素将赢得先定位的元素&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;z-index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;z-index只接受无单位索引值；较高的值将高于较低的值。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;固定定位&quot;&gt;固定定位&lt;/h1&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;fixed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;固定定位与绝对定位的工作方式完全相同，只有一个主要的区别：&lt;/p&gt;
+
+&lt;p&gt;绝对定位固定元素是相对于&amp;lt;html&amp;gt;元素或其最近的定位祖先，而固定定位固定元素则是相对于浏览器视口本身。&lt;/p&gt;
+
+&lt;h1 id=&quot;position-sticky&quot;&gt;position: sticky&lt;/h1&gt;
+
+&lt;p&gt;它允许被定位元素表现得像相对定位一样，直到它滚动到某个点（例如，从视口顶部起10像素）为止，此后它就变得固定了。例如，它可用于使导航栏随页面滚动直到特定点，然后粘贴在页面顶部。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.positioned&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sticky&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position: sticky&lt;/code&gt;的一种常用的用法，是创建一个滚动索引页面。在此页面上，不同的标题会停留在页面顶部。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Sticky positioning&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;dl&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dt&amp;gt;&lt;/span&gt;A&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dt&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Apple&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Ant&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Altimeter&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Airplane&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dt&amp;gt;&lt;/span&gt;B&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dt&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Bird&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Buzzard&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Bee&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Banana&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Beanstalk&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dt&amp;gt;&lt;/span&gt;C&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dt&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Calculator&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Cane&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Camera&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Camel&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dt&amp;gt;&lt;/span&gt;D&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dt&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Duck&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Dime&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Dipstick&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Drone&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dt&amp;gt;&lt;/span&gt;E&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dt&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Egg&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Elephant&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;Egret&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dl&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;CSS布局如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;dt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sticky&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在正常的布局流中，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;dt&amp;gt;&lt;/code&gt;元素将随内容滚动。当我们在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;dt&amp;gt;&lt;/code&gt;元素上添加&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;position: sticky&lt;/code&gt;，并将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top&lt;/code&gt;的值设置为0，当标题滚动到视口的顶部时，支持此属性的浏览器会将标题粘贴到那个位置。随后，每个后续标题将替换前一个标题，直到它向上滚动到该位置。&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>BB</name><email>18281045278@163.com</email></author><category term="CSS" /><category term="笔记" /><summary type="html">静态定位 静态定位是每个元素获取的默认值 为了演示这一点，首先在HTML中添加一个</summary></entry><entry><title type="html">Markdown 语法</title><link href="http://localhost:4000/2020/11/02/Markdown-%E8%AF%AD%E6%B3%95.html" rel="alternate" type="text/html" title="Markdown 语法" /><published>2020-11-02T00:00:00+08:00</published><updated>2020-11-02T00:00:00+08:00</updated><id>http://localhost:4000/2020/11/02/Markdown%20%E8%AF%AD%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2020/11/02/Markdown-%E8%AF%AD%E6%B3%95.html">&lt;h1 id=&quot;markdown-标题&quot;&gt;Markdown 标题&lt;/h1&gt;
 &lt;p&gt;使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt; 号可以表示1-6级标题，一级标题对应一个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt; 号，二级标题对应两个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt; 号，以此类推。&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -12,9 +154,9 @@
 ##### 五级标题
 ###### 六级标题
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;markdown-段落&quot;&gt;Markdown 段落&lt;/h2&gt;
+&lt;h1 id=&quot;markdown-段落&quot;&gt;Markdown 段落&lt;/h1&gt;
 &lt;p&gt;Markdown 段落没有特殊的格式，直接编写文字就行，&lt;strong&gt;段落的换行是使用两个以上的空格加上回车&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;字体&quot;&gt;字体&lt;/h3&gt;
+&lt;h2 id=&quot;字体&quot;&gt;字体&lt;/h2&gt;
 &lt;p&gt;Markdown可以使用以下几种字体&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*斜体文本*
 _斜体文本_
@@ -22,7 +164,7 @@ _斜体文本_
 **粗体文本**
 __粗体文本__
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;分隔线&quot;&gt;分隔线&lt;/h3&gt;
+&lt;h2 id=&quot;分隔线&quot;&gt;分隔线&lt;/h2&gt;
 &lt;p&gt;你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;***
 
@@ -34,17 +176,17 @@ __粗体文本__
 
 ----------
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;删除线&quot;&gt;删除线&lt;/h3&gt;
+&lt;h2 id=&quot;删除线&quot;&gt;删除线&lt;/h2&gt;
 &lt;p&gt;如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~~&lt;/code&gt; 即可，实例如下：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RUNOOB.COM
 GOOGLE.COM
 ~~BAIDU.COM~~
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;下划线&quot;&gt;下划线&lt;/h3&gt;
+&lt;h2 id=&quot;下划线&quot;&gt;下划线&lt;/h2&gt;
 &lt;p&gt;下划线可以通过 HTML 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;u&amp;gt;&lt;/code&gt; 标签来实现：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;u&amp;gt;带下划线文本&amp;lt;/u&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;脚注&quot;&gt;脚注&lt;/h3&gt;
+&lt;h2 id=&quot;脚注&quot;&gt;脚注&lt;/h2&gt;
 &lt;p&gt;脚注是对文本的补充说明。Markdown 脚注的格式如下:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[^要注明的文本]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -53,7 +195,7 @@ GOOGLE.COM
 
 [^RUNOOB]: this is google link
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;markdown列表&quot;&gt;Markdown列表&lt;/h2&gt;
+&lt;h1 id=&quot;markdown列表&quot;&gt;Markdown列表&lt;/h1&gt;
 &lt;p&gt;Markdown 支持有序列表和无序列表。&lt;/p&gt;
 
 &lt;p&gt;无序列表使用星号 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; 、加号 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 或是减号 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt; 作为列表标记，这些标记后面要添加一个空格，然后再填写内容：&lt;/p&gt;
@@ -75,7 +217,7 @@ GOOGLE.COM
 2. 第二项
 3. 第三项
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;列表嵌套&quot;&gt;列表嵌套&lt;/h3&gt;
+&lt;h2 id=&quot;列表嵌套&quot;&gt;列表嵌套&lt;/h2&gt;
 &lt;p&gt;列表嵌套只需在子列表中的选项前面添加四个空格即可：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 第一项：
     - 第一项嵌套的第一个元素
@@ -84,7 +226,7 @@ GOOGLE.COM
     - 第二项嵌套的第一个元素
     - 第二项嵌套的第二个元素
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;markdown-区块&quot;&gt;Markdown 区块&lt;/h2&gt;
+&lt;h1 id=&quot;markdown-区块&quot;&gt;Markdown 区块&lt;/h1&gt;
 &lt;p&gt;Markdown 区块引用是在段落开头使用 &amp;gt; 符号 ，然后后面紧跟一个空格符号：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; 区块引用
 &amp;gt; 区块引用
@@ -95,7 +237,7 @@ GOOGLE.COM
 &amp;gt; &amp;gt; 第一层嵌套
 &amp;gt; &amp;gt; &amp;gt; 第二层嵌套
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;区块中使用列表&quot;&gt;区块中使用列表&lt;/h3&gt;
+&lt;h2 id=&quot;区块中使用列表&quot;&gt;区块中使用列表&lt;/h2&gt;
 &lt;p&gt;区块中使用列表实例如下：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; 区块中使用列表
 &amp;gt; 1. 第一项
@@ -104,7 +246,7 @@ GOOGLE.COM
 &amp;gt; + 第二项
 &amp;gt; + 第三项
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;列表中使用区块&quot;&gt;列表中使用区块&lt;/h3&gt;
+&lt;h2 id=&quot;列表中使用区块&quot;&gt;列表中使用区块&lt;/h2&gt;
 &lt;p&gt;如果要在列表项目内放进区块，那么就需要在 &amp;gt; 前添加四个空格的缩进。&lt;/p&gt;
 
 &lt;p&gt;区块中使用列表实例如下：&lt;/p&gt;
@@ -113,11 +255,11 @@ GOOGLE.COM
     &amp;gt; 学的不仅是技术更是梦想
 * 第二项
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;markdown-代码&quot;&gt;Markdown 代码&lt;/h2&gt;
+&lt;h1 id=&quot;markdown-代码&quot;&gt;Markdown 代码&lt;/h1&gt;
 &lt;p&gt;如果是段落上的一个函数或片段的代码可以用反引号把它包起来，例如：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;`printf()`函数
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;代码区块&quot;&gt;代码区块&lt;/h3&gt;
+&lt;h2 id=&quot;代码区块&quot;&gt;代码区块&lt;/h2&gt;
 &lt;p&gt;代码区块使用 &lt;strong&gt;4 个空格&lt;/strong&gt; 或者一个 &lt;strong&gt;制表符（Tab 键）&lt;/strong&gt;。&lt;/p&gt;
 
 &lt;p&gt;你也可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：&lt;/p&gt;
@@ -129,7 +271,7 @@ alert('Hello!');
 });
 &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;```&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;markdown-链接&quot;&gt;Markdown 链接&lt;/h2&gt;
+&lt;h1 id=&quot;markdown-链接&quot;&gt;Markdown 链接&lt;/h1&gt;
 &lt;p&gt;链接使用方法如下：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[链接名称](链接地址)
 
@@ -144,7 +286,7 @@ alert('Hello!');
 &lt;p&gt;直接使用链接地址：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;https://www.google.com&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;高级链接&quot;&gt;高级链接&lt;/h3&gt;
+&lt;h2 id=&quot;高级链接&quot;&gt;高级链接&lt;/h2&gt;
 &lt;p&gt;我们可以通过变量来设置一个链接，变量赋值在文档末尾进行：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;这个链接用 1 作为网址变量 [Google][1]
 这个链接用 runoob 作为网址变量 [baidu][2]
@@ -153,7 +295,7 @@ alert('Hello!');
   [1]: http://www.google.com/
   [2]: http://www.baidu.com/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;markdown-图片&quot;&gt;Markdown 图片&lt;/h2&gt;
+&lt;h1 id=&quot;markdown-图片&quot;&gt;Markdown 图片&lt;/h1&gt;
 &lt;p&gt;Markdown图片语法格式如下：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![alt 属性文本](图片地址)
 
@@ -179,7 +321,7 @@ alert('Hello!');
 &lt;p&gt;Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 标签。&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;img src=&quot;http://...&quot; width=&quot;50%&quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;markdown-表格&quot;&gt;Markdown 表格&lt;/h2&gt;
+&lt;h1 id=&quot;markdown-表格&quot;&gt;Markdown 表格&lt;/h1&gt;
 &lt;p&gt;Markdown 制作表格使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt; 来分隔不同的单元格，使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt; 来分隔表头和其他行。&lt;/p&gt;
 
 &lt;p&gt;语法格式如下：&lt;/p&gt;
@@ -232,15 +374,15 @@ alert('Hello!');
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&quot;markdown-高级技巧&quot;&gt;Markdown 高级技巧&lt;/h2&gt;
+&lt;h1 id=&quot;markdown-高级技巧&quot;&gt;Markdown 高级技巧&lt;/h1&gt;
 
-&lt;h3 id=&quot;支持的html元素&quot;&gt;支持的HTML元素&lt;/h3&gt;
+&lt;h2 id=&quot;支持的html元素&quot;&gt;支持的HTML元素&lt;/h2&gt;
 &lt;p&gt;不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。&lt;/p&gt;
 
 &lt;p&gt;目前支持的 HTML 元素有：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;kbd&amp;gt;&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;b&amp;gt;&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;i&amp;gt;&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;em&amp;gt;&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;sup&amp;gt;&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;sub&amp;gt;&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;br&amp;gt;&lt;/code&gt;等 ，如：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;使用 &amp;lt;kbd&amp;gt;Ctrl&amp;lt;/kbd&amp;gt;+&amp;lt;kbd&amp;gt;Alt&amp;lt;/kbd&amp;gt;+&amp;lt;kbd&amp;gt;Del&amp;lt;/kbd&amp;gt; 重启电脑
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;转义&quot;&gt;转义&lt;/h3&gt;
+&lt;h2 id=&quot;转义&quot;&gt;转义&lt;/h2&gt;
 &lt;p&gt;Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**文本加粗** 
 \*\* 正常显示星号 \*\*
@@ -259,7 +401,7 @@ _   下划线
 .   英文句点
 !   感叹号
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;公式&quot;&gt;公式&lt;/h3&gt;
+&lt;h2 id=&quot;公式&quot;&gt;公式&lt;/h2&gt;
 &lt;p&gt;当你需要在编辑器中插入数学公式时，可以使用两个美元符 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$$&lt;/code&gt; 包裹 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TeX&lt;/code&gt; 或 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LaTeX&lt;/code&gt; 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mathjax&lt;/code&gt; 对数学公式进行渲染。如：&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$$
 \mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
@@ -271,7 +413,7 @@ ${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
 $$
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;hr /&gt;</content><author><name>BB</name><email>18281045278@163.com</email></author><category term="Markdown" /><summary type="html">Markdown 使用方法 Markdown 标题 使用 # 号可以表示1-6级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</summary></entry><entry><title type="html">乖乖</title><link href="http://localhost:4000/2020/10/26/RR.html" rel="alternate" type="text/html" title="乖乖" /><published>2020-10-26T00:00:00+08:00</published><updated>2020-10-26T00:00:00+08:00</updated><id>http://localhost:4000/2020/10/26/RR</id><content type="html" xml:base="http://localhost:4000/2020/10/26/RR.html">&lt;p&gt;I miss you.
+&lt;hr /&gt;</content><author><name>BB</name><email>18281045278@163.com</email></author><category term="Markdown" /><category term="笔记" /><summary type="html">Markdown 标题 使用 # 号可以表示1-6级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</summary></entry><entry><title type="html">乖乖</title><link href="http://localhost:4000/2020/10/26/RR.html" rel="alternate" type="text/html" title="乖乖" /><published>2020-10-26T00:00:00+08:00</published><updated>2020-10-26T00:00:00+08:00</updated><id>http://localhost:4000/2020/10/26/RR</id><content type="html" xml:base="http://localhost:4000/2020/10/26/RR.html">&lt;p&gt;I miss you.
 &lt;!--more--&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;“I love you very much, probably more than anybody could love another person.”   – Henry, 50 First Dates《初恋50次》&lt;br /&gt;
