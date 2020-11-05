@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="zh">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>乖乖 - 贰贰贰肆柒柒</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>定位 - 贰贰贰肆柒柒</title>
 
-<meta name="description" content="I miss you.">
-<link rel="canonical" href="http://localhost:4000/2020/10/26/RR.html"><link rel="alternate" type="application/rss+xml" title="贰贰贰肆柒柒" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="静态定位静态定位是每个元素获取的默认值为了演示这一点，首先在HTML中添加一个">
+<link rel="canonical" href="http://localhost:4000/2020/11/03/position.html"><link rel="alternate" type="application/rss+xml" title="贰贰贰肆柒柒" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -279,35 +279,170 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>乖乖</h1></header><span class="split-space">&nbsp;</span>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>定位</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="在 Github 上修改"
-            href="https://github.com/user_name/repo_name/tree/master/_posts/2020-10-26-RR.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="乖乖"><div class="article__info clearfix"><ul class="left-col menu"><li>
+            href="https://github.com/user_name/repo_name/tree/master/_posts/2020-11-03-position.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="定位"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=%E4%B9%96%E4%B9%96">乖乖</a>
+                href="/archive.html?tag=CSS">CSS</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=%E5%AE%9D%E5%AE%9D">宝宝</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>2020年 10月26日</span>
-            </li></ul></div><meta itemprop="author" content="BB"/><meta itemprop="datePublished" content="2020-10-26T00:00:00+08:00">
-    <meta itemprop="keywords" content="乖乖,宝宝"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+                href="/archive.html?tag=%E7%AC%94%E8%AE%B0">笔记</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>2020年 11月03日</span>
+            </li></ul></div><meta itemprop="author" content="BB"/><meta itemprop="datePublished" content="2020-11-03T00:00:00+08:00">
+    <meta itemprop="keywords" content="CSS,笔记"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><p>I miss you.
-<!--more--></p>
+<div class="article__content" itemprop="articleBody"><h1 id="静态定位">静态定位</h1>
+
+<p>静态定位是每个元素获取的默认值</p>
+
+<p>为了演示这一点，首先在HTML中添加一个</p>
+
+<!--more-->
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"positioned"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>现在，将一下规则添加到CSS的底部：</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.positiioned</span> <span class="p">{</span>
+	<span class="nl">position</span><span class="p">:</span> <span class="nb">static</span><span class="p">;</span>
+	<span class="nl">background</span><span class="p">:</span> <span class="no">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>如果现在保存和刷新，除了第2段的更新的背景颜色，根本没有差别——静态定位是默认行为!</p>
+
+<h1 id="相对定位">相对定位</h1>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">position</span><span class="o">:</span> <span class="nt">relative</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>如果在此阶段保存并刷新，则结果根本不会发生变化。修改元素的位置需要使用<code class="language-plaintext highlighter-rouge">top</code>，<code class="language-plaintext highlighter-rouge">bottom</code>，<code class="language-plaintext highlighter-rouge">left</code> 和 <code class="language-plaintext highlighter-rouge">right</code> 属性 。</p>
+
+<h1 id="topbottomleftright">top，bottom，left，right</h1>
+
+<p><code class="language-plaintext highlighter-rouge">top</code>，<code class="language-plaintext highlighter-rouge">bottom</code>，<code class="language-plaintext highlighter-rouge">left</code> 和 <code class="language-plaintext highlighter-rouge">right</code>来精确指定要将定位元素移动到的位置。</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">top</span><span class="o">:</span> <span class="err">30</span><span class="nt">px</span><span class="o">;</span>
+<span class="nt">left</span><span class="o">:</span> <span class="err">30</span><span class="nt">px</span><span class="o">;</span>
+</code></pre></div></div>
+
 <blockquote>
-  <p>“I love you very much, probably more than anybody could love another person.”   – Henry, 50 First Dates《初恋50次》<br />
-我非常爱你，也许超过世上任何一个人爱另外一个人可能达到的程度</p>
+  <p><strong>注意：</strong>这些属性的值可以采用逻辑上期望的任何单位——px，mm，rems，%等。</p>
 </blockquote>
 
-<hr />
+<h1 id="绝对定位">绝对定位</h1>
 
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-10-26T00:00:00+08:00"><!-- start custom article footer snippet -->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>position: absolute;
+</code></pre></div></div>
+
+<p>绝对定位的的元素独立于一切，处于单独的一层。</p>
+
+<p>这意味着可以创建不干扰页面上其他元素的位置的隔离的UI功能。</p>
+
+<blockquote>
+  <p><strong>注意：</strong>margins 仍会影响定位的元素。然而 margin collapsing 不会。</p>
+</blockquote>
+
+<h1 id="定位上下文">定位上下文</h1>
+
+<p>绝对元素的”包含元素“，取决于绝对定位元素的父元素position属性。</p>
+
+<blockquote>
+  <p>如果所有的父元素都没有显式地定义position属性，那么所有的父元素默认情况下position属性都是static。结果，绝对定位元素会被包含在初始块容器中。这个初始块容器有着和浏览器视口一样的尺寸，并且&lt;html&gt;元素也被包含在这个容器里面。</p>
+</blockquote>
+
+<p>简单来说，绝对定位元素会被放在&lt;html&gt;元素的外面，并且根据浏览器视口来定位。</p>
+
+<h1 id="z-index">z-index</h1>
+
+<p>z-index决定每一层的顺序。</p>
+
+<p><strong>源顺序（HTML标记）中后定位的元素将赢得先定位的元素</strong></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">z-index</span><span class="o">:</span> <span class="err">1</span><span class="o">;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>注意：</strong>z-index只接受无单位索引值；较高的值将高于较低的值。</p>
+</blockquote>
+
+<h1 id="固定定位">固定定位</h1>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">position</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>固定定位与绝对定位的工作方式完全相同，只有一个主要的区别：</p>
+
+<p>绝对定位固定元素是相对于&lt;html&gt;元素或其最近的定位祖先，而固定定位固定元素则是相对于浏览器视口本身。</p>
+
+<h1 id="position-sticky">position: sticky</h1>
+
+<p>它允许被定位元素表现得像相对定位一样，直到它滚动到某个点（例如，从视口顶部起10像素）为止，此后它就变得固定了。例如，它可用于使导航栏随页面滚动直到特定点，然后粘贴在页面顶部。</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.positioned</span> <span class="p">{</span>
+    <span class="nl">position</span><span class="p">:</span> <span class="n">sticky</span><span class="p">;</span>
+    <span class="nl">top</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="nl">left</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">position: sticky</code>的一种常用的用法，是创建一个滚动索引页面。在此页面上，不同的标题会停留在页面顶部。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Sticky positioning<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;dl&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>A<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Apple<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Ant<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Altimeter<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Airplane<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>B<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Bird<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Buzzard<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Bee<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Banana<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Beanstalk<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>C<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Calculator<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Cane<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Camera<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Camel<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>D<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Duck<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Dime<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Dipstick<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Drone<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>E<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Egg<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Elephant<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Egret<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre></div></div>
+
+<p>CSS布局如下：</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">dt</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="n">sticky</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>在正常的布局流中，<code class="language-plaintext highlighter-rouge">&lt;dt&gt;</code>元素将随内容滚动。当我们在<code class="language-plaintext highlighter-rouge">&lt;dt&gt;</code>元素上添加<code class="language-plaintext highlighter-rouge">position: sticky</code>，并将<code class="language-plaintext highlighter-rouge">top</code>的值设置为0，当标题滚动到视口的顶部时，支持此属性的浏览器会将标题粘贴到那个位置。随后，每个后续标题将替换前一个标题，直到它向上滚动到该位置。</p>
+
+<hr />
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-11-03T00:00:00+08:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"></div></footer>
-<div class="article__section-navigator clearfix"><div class="next"><span>下篇</span><a href="/2020/11/02/Markdown.html">Markdown 语法</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>上篇</span><a href="/2020/11/02/Markdown.html">Markdown 语法</a></div><div class="next"><span>下篇</span><a href="/2020/11/05/hideen_info_panel_start.html">滑动隐藏的面板</a></div></div></div>
 
 </div>
 

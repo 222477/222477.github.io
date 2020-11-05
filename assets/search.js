@@ -1,1 +1,1 @@
-window.TEXT_SEARCH_DATA={'posts':[{'title':"乖乖",'url':"/2020/10/26/RR.html"},{'title':"Markdown 语法",'url':"/2020/11/02/Markdown-%E8%AF%AD%E6%B3%95.html"},{'title':"定位",'url':"/2020/11/03/%E5%AE%9A%E4%BD%8D.html"}]};
+window.TEXT_SEARCH_DATA={'posts':[{'title':"乖乖",'url':"/2020/10/26/RR.html"},{'title':"Markdown 语法",'url':"/2020/11/02/Markdown.html"},{'title':"定位",'url':"/2020/11/03/position.html"},{'title':"滑动隐藏的面板",'url':"/2020/11/05/hideen_info_panel_start.html"},{'title':"固定位置的列表消息盒子",'url':"/2020/11/05/info_box.html"}]};
